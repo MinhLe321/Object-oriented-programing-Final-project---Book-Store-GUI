@@ -1,8 +1,5 @@
-//Command that link library together: javac --module-path "javafx-sdk-26 (for macos)"/lib --add-modules javafx.controls GUI.java
-//Command run: java --module-path "javafx-sdk-26 (for macos)"/lib --add-modules javafx.controls GUI.java
-//For window, just download and use the javafx-sdk-26 (for window) and change the name to this to compile and run
-//For example: javac --module-path "javafx-sdk-26 (for window)"/lib --add-modules javafx.controls GUI.java
-//Command run: java --module-path "javafx-sdk-26 (for window)"/lib --add-modules javafx.controls GUI.java
+//Command that link library together: javac --module-path "javafx-sdk-26"/lib --add-modules javafx.controls GUI.java
+//Command run: java --module-path "javafx-sdk-26"/lib --add-modules javafx.controls GUI.java
 import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
