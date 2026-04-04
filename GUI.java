@@ -99,6 +99,6 @@ public class GUI{
         // Panel panel = new Panel(window); //Pass the window interface to Panel so panel knows which window to modify
 
         // window.addPanel(panel); //Connect panel with the Window
-        // window.setVisible(true);
+        window.setVisible(true);
     }
 }
