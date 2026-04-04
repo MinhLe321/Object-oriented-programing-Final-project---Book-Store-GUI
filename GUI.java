@@ -1,6 +1,5 @@
 import javax.swing.*;
 import java.awt.*;
-<<<<<<< HEAD
 import java.awt.event.*;
 
 //This interface is like a constrast, any class that want to implements this interface must provide an implementation of the methods declared here
