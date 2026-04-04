@@ -1,5 +1,6 @@
 import javax.swing.*;
 import java.awt.*;
+<<<<<<< HEAD
 import java.awt.event.*;
 
 //This interface is like a constrast, any class that want to implements this interface must provide an implementation of the methods declared here
@@ -102,3 +103,19 @@ public class GUI{
         // window.setVisible(true);
     }
 }
+=======
+
+class Window extends JFrame{
+    public Window(){
+        setTitle("Book Store GUI");
+        setSize(800,600);
+        setResizable(false); //Prevent resizing the window
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setVisible(true);
+    }
+
+    public static void main(String[] args){
+        Window window = new Window();
+    }
+}
+>>>>>>> a94b2c605c9b789aff626efd405bd5be2ce36f43
