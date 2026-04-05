@@ -12,12 +12,12 @@ public class Book {
     }
 
     public Book(String title, String author, double price){
-        if(title == null || title.equals(" ") || title.isEmpty()){
+        if(title == null || title.trim().isEmpty()){
             this.title = "Unknown";
         }else{
             this.title = title;
         }
-        if(author == null || author.equals(" ") || author.isEmpty()){
+        if(author == null || author.trim().isEmpty()){
             this.author = "Unknown";
         }else{
            this.author = author; 

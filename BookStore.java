@@ -1,36 +1,66 @@
 package BookStoreGUI;
 
+import java.util.ArrayList;
 import java.util.List;
 
-public class BookStore  extends Book implements searchable{
+public class BookStore implements Searchable{
     private List<Book> books;
 
+    public BookStore() {
+        books = new ArrayList<>();
+    }
     
-    public Book searchByTitle(String title){
-        if(title == null || title.equals(" ") || title.isEmpty()){
+    public List<Book> searchByTitle(String title){
+         List<Book> abooks = new ArrayList<>();
+        if(title == null || title.trim().isEmpty()){
             return null;
         }
+        title = title.trim();
         for(int i = 0; i < books.size(); i++){
             Book book = books.get(i);
-            if(book.getTitle().equals(title)){
-                return book;
+            if(book.getTitle().equalsIgnoreCase(title)){
+                abooks.add(book);
             }
         }
-        return null;
+        return abooks;
     }
 
      public List<Book> searchByAuthor(String author){
-        List<Book> Ebooks = List.of();
-        if( author== null || author.equals(" ") || author.isEmpty()){
-            return null;
+        List<Book> abooks = new ArrayList<>();
+        if(author == null || author.trim().isEmpty()){
+            return abooks;
         }
+         author = author.trim();
+
         for(int i = 0; i < books.size(); i++){
             Book book = books.get(i);
-            if(book.getAuthor().equals(author)){
-                 Ebooks.add(book);
+            if(book.getAuthor().equalsIgnoreCase(author)){
+                 abooks.add(book);
             }
         }
 
-        return Ebooks;
+        return abooks;
     }
+
+    public void addBook(Book book){
+        if(book == null){
+            throw new IllegalArgumentException("Book cannot be null");
+        }
+        books.add(book);
+    }
+
+    public boolean isAvailable(String title){
+        if(title == null || title.trim().isEmpty()){
+            return false;
+        }
+        title = title.trim();
+        for(int i = 0; i < books.size(); i++){
+            Book book = books.get(i);
+            if(book.getTitle().equalsIgnoreCase(title)){
+                return true;
+            }
+        }
+        return false;
+    }
+
 }
