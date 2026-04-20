@@ -70,6 +70,7 @@ public class Book {
         }
     }
 
+    // Format how the book information is displayed
     public String toString(){
          return "Title: " + title + " | Author: " + author + " | Price: $" + price;
     }
